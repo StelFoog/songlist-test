@@ -6,5 +6,5 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 export default function () {
-	return dayjs().tz('Europe/Stockholm').format('[Build for changes made at] YYYY-MM-DD HH:mm:ss');
+	return dayjs().tz('Europe/Stockholm').format('YYYYMMDD.HHmmss');
 }

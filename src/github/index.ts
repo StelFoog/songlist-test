@@ -1,4 +1,5 @@
-import buildCommitTitle from './buildCommitTitle';
+import releaseName from './releaseName';
+import releaseTag from './releaseTag';
 import songChanges from './songChanges';
 
 async function main(): Promise<0 | 1> {
@@ -6,8 +7,12 @@ async function main(): Promise<0 | 1> {
 
 	try {
 		switch (command) {
-			case 'commitTitle': {
-				console.log(`out=${buildCommitTitle()}`);
+			case 'releaseName': {
+				console.log(`out=${releaseName()}`);
+				return 0;
+			}
+			case 'releaseTag': {
+				console.log(`out=${releaseTag()}`);
 				return 0;
 			}
 			case 'songChanges': {
